@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hourscroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hourscroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  /* cursor: pointer; */
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  /* color: white; */
+  user-select: none;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+/* body {
+  background-color: rgb(17, 16, 16);
+} */
+
+.background {
+  border-radius: 20px;
+  /* background: linear-gradient(-45deg, #2d2f33 19%, #245676 50%, #2d2f33 83%); */
+  /* background: linear-gradient(
+    -45deg,
+    rgba(45, 47, 51, 0.8) 17%,
+    rgba(36, 86, 118, 0.7) 50%,
+    rgba(45, 47, 51, 0.7) 80%
+  ); */
+  animation: myanim 1s linear 0s 1;
+  /* filter: blur(1px); */
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes myanim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.load-img {
+  animation: loadanim 0.5s linear 0s infinite;
+}
+
+@keyframes loadanim {
+  0% {
+    /* transform:translateX(200px); */
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    /* transform: translateX(0); */
+    opacity: 1;
+  }
+}
+
+.open {
+  animation: myanim 0.4s ease-in-out 0s 1;
+}
+
+.my--theme {
+  animation: themeanim 2s ease-in-out 0s 1;
+}
+.my--theme1 {
+  animation: themeanim1 2s ease-in-out 0s 1;
+}
+
+@keyframes themeanim {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    /* transform: scale(0); */
+    opacity: 1;
+  }
+  100% {
+    /* transform: scale(1); */
+    transform: translateX(45px) rotate(360deg) scale(0);
+    opacity: 0.5;
+  }
+}
+@keyframes themeanim1 {
+  0% {
+    /* transform: scale(0); */
+    transform: translateX(0) rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    /* transform: scale(1); */
+    transform: translateX(-45px) rotate(0deg) scale(0);
+    opacity: 0.5;
+  }
+}

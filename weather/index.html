@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/13.jpeg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="description" content="Mine Weather always provides correct details at every location" />
+  <link rel="apple-touch-icon" href="/13.jpeg" />
+  <link rel="manifest" href="/manifest.json" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8556448273384155"
+    crossorigin="anonymous"></script>
+  <title>Mine Weather</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Register a service worker hosted at the root of the
+      // site using the default scope.
+      navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+        // console.log('Service worker registration succeeded:', registration);
+      }, /*catch*/ function (error) {
+        // console.log('Service worker registration failed:', error);
+      });
+    } else {
+      // console.log('Service workers are not supported.');
+    }
+  </script>
+
+</body>
+
+</html>
